@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpiceHub Restaurant</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#ff6b35,#ff9f1c);
+    color:white;
+    text-align:center;
+    padding:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+header h1{
+    font-size:2.8rem;
+}
+
+header p{
+    margin-top:10px;
+    font-size:1.1rem;
+}
+
+.hero{
+    height:85vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url("https://images.unsplash.com/photo-1513104890138-7c749659a591");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:1.3rem;
+}
+
+.section{
+    padding:70px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:40px;
+    color:#ff6b35;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card h3{
+    color:#ff6b35;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#777;
+}
+
+.location-box{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    font-size:1.2rem;
+}
+
+.chatbot{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.chatbot p{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:1.1rem;
+}
+
+footer{
+    background:#1f2937;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+footer h3{
+    margin-bottom:10px;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>SpiceHub Restaurant</h1>
+<p>Delicious Food Delivered Fast</p>
+</header>
+
+<section class="hero">
+<div>
+<h1>Welcome to SpiceHub</h1>
+<p>Order your favorite food instantly using our AI Chatbot</p>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">About Us</h2>
+
+<p style="text-align:center;font-size:18px;">
+SpiceHub Restaurant is a modern AI-powered food ordering platform
+located in Patancheru, Hyderabad. Customers can browse our menu,
+place orders through an intelligent chatbot, and track their orders
+in real-time.
+</p>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Our Menu</h2>
+
+<div class="menu-grid">
+
+<div class="card"><h3>Pav Bhaji</h3></div>
+
+<div class="card"><h3>Chole Bhature</h3></div>
+
+<div class="card"><h3>Pizza</h3></div>
+
+<div class="card"><h3>Mango Lassi</h3></div>
+
+<div class="card"><h3>Masala Dosa</h3></div>
+
+<div class="card"><h3>Biryani</h3></div>
+
+<div class="card"><h3>Vada Pav</h3></div>
+
+<div class="card"><h3>Rava Dosa</h3></div>
+
+<div class="card"><h3>Samosa</h3></div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Location</h2>
+
+<div class="location">
+📍 Patancheru, Hyderabad, Telangana
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">AI Food Ordering Chatbot</h2>
+
+<div class="chatbot">
+
+<p>
+Use our AI-powered chatbot to place food orders,
+track orders, and manage your cart.
+</p>
+
+<br>
+
+<!-- Replace with Dialogflow Messenger -->
+
+<df-messenger
+intent="WELCOME"
+chat-title="SpiceHub Bot"
+agent-id="12c9668e-7349-4bc4-9a27-3284d41cea92"
+language-code="en">
+</df-messenger>
+
+<script
+src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1">
+</script>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>SpiceHub Restaurant</h3>
+
+<p>
+Patancheru, Hyderabad
+</p>
+
+<p>
+AI Powered Food Ordering System
+</p>
+
+</footer>
+
+</body>
+</html>

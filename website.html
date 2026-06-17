@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SpiceHub Restaurant</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>SpiceHub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,240 +17,265 @@
     font-family:'Poppins',sans-serif;
 }
 
-body{
-    background:#f4f7fc;
-    color:#333;
-}
-
-header{
-    background:linear-gradient(135deg,#ff6b35,#ff9f1c);
-    color:white;
-    text-align:center;
-    padding:25px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.15);
-}
-
-header h1{
-    font-size:2.8rem;
-}
-
-header p{
-    margin-top:10px;
-    font-size:1.1rem;
-}
-
-.hero{
-    height:85vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.55),
-    rgba(0,0,0,0.55)),
-    url("https://images.unsplash.com/photo-1513104890138-7c749659a591");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-}
-
-.hero-content h1{
-    font-size:4rem;
-    margin-bottom:15px;
-}
-
-.hero-content p{
-    font-size:1.3rem;
-}
-
-.section{
-    padding:70px 10%;
-}
-
-.section-title{
-    text-align:center;
-    font-size:2.5rem;
-    margin-bottom:40px;
-    color:#ff6b35;
-}
-
-.menu-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:20px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
-    transition:0.3s ease;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 15px 30px rgba(0,0,0,0.15);
-}
-
-.card h3{
-    color:#ff6b35;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#777;
-}
-
-.location-box{
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
-    font-size:1.2rem;
-}
-
-.chatbot{
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
-}
-
-.chatbot p{
-    text-align:center;
-    margin-bottom:20px;
-    font-size:1.1rem;
-}
-
-footer{
-    background:#1f2937;
-    color:white;
-    text-align:center;
-    padding:25px;
-    margin-top:50px;
-}
-
-footer h3{
-    margin-bottom:10px;
-}
-
 html{
     scroll-behavior:smooth;
 }
 
+body{
+    background:#000;
+    overflow-x:hidden;
+}
+
+/* HERO SECTION */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:50px 20px;
+}
+
+/* GLOW EFFECTS */
+
+.glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(180px);
+}
+
+.glow1{
+    width:500px;
+    height:500px;
+    background:#2563eb;
+    top:-150px;
+    left:-100px;
+    opacity:.5;
+}
+
+.glow2{
+    width:450px;
+    height:450px;
+    background:#9333ea;
+    top:20%;
+    right:-100px;
+    opacity:.45;
+}
+
+.glow3{
+    width:400px;
+    height:400px;
+    background:#06b6d4;
+    bottom:-100px;
+    left:35%;
+    opacity:.35;
+}
+
+.glow4{
+    width:350px;
+    height:350px;
+    background:#f97316;
+    bottom:50px;
+    right:20%;
+    opacity:.25;
+}
+
+/* CONTENT */
+
+.content{
+    position:relative;
+    z-index:10;
+    width:100%;
+    max-width:1200px;
+    text-align:center;
+}
+
+.content h1{
+    color:white;
+    font-size:6rem;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#d4d4d4;
+    font-size:1.4rem;
+    margin-bottom:40px;
+}
+
+/* MENU CARDS */
+
+.menu-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+
+    margin-bottom:50px;
+}
+
+.menu-card{
+
+    color:white;
+
+    padding:14px 28px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+    border-radius:50px;
+
+    backdrop-filter:blur(20px);
+
+    transition:.3s;
+}
+
+.menu-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#3b82f6;
+
+    box-shadow:
+    0 0 25px rgba(59,130,246,.4);
+}
+
+/* CHATBOT CARD */
+
+.chatbot-container{
+
+    width:100%;
+    max-width:1000px;
+
+    margin:auto;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(20,20,20,.95),
+        rgba(0,0,0,.95)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    border-radius:35px;
+
+    padding:25px;
+
+    backdrop-filter:blur(30px);
+
+    box-shadow:
+    0 25px 80px rgba(0,0,0,.8);
+}
+
+/* DIALOGFLOW */
+
+df-messenger {
+    --df-messenger-bot-message: #1e1e1e;
+    --df-messenger-user-message: #2563eb;
+    --df-messenger-chat-background: #000000;
+    --df-messenger-font-color: white;
+    --df-messenger-button-titlebar-color: #111111;
+    --df-messenger-send-icon: #3b82f6;
+}
+
+
+/* LOCATION */
+
+.location{
+
+    margin-top:40px;
+
+    color:white;
+
+    font-size:1.1rem;
+
+    opacity:.8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .content h1{
+        font-size:3rem;
+    }
+
+    .subtitle{
+        font-size:1rem;
+    }
+
+    .chatbot-container{
+        padding:15px;
+    }
+
+    df-messenger{
+        height:600px;
+    }
+}
+
 </style>
 </head>
-
 <body>
 
-<header>
-<h1>SpiceHub Restaurant</h1>
-<p>Delicious Food Delivered Fast</p>
-</header>
-
 <section class="hero">
-<div>
-<h1>Welcome to SpiceHub</h1>
-<p>Order your favorite food instantly using our AI Chatbot</p>
-</div>
-</section>
 
-<section class="section">
-<h2 class="section-title">About Us</h2>
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+    <div class="glow glow3"></div>
+    <div class="glow glow4"></div>
 
-<p style="text-align:center;font-size:18px;">
-SpiceHub Restaurant is a modern AI-powered food ordering platform
-located in Patancheru, Hyderabad. Customers can browse our menu,
-place orders through an intelligent chatbot, and track their orders
-in real-time.
-</p>
+    <div class="content">
 
-</section>
+        <h1>SpiceHub</h1>
 
-<section class="section">
+        <p class="subtitle">
+            Intelligent Food Ordering Chatbot
+        </p>
 
-<h2 class="section-title">Our Menu</h2>
+        <div class="menu-grid">
 
-<div class="menu-grid">
+            <div class="menu-card">🍕 Pizza</div>
+            <div class="menu-card">🥘 Pav Bhaji</div>
+            <div class="menu-card">🍛 Biryani</div>
+            <div class="menu-card">🥤 Mango Lassi</div>
+            <div class="menu-card">🥞 Masala Dosa</div>
+            <div class="menu-card">🌮 Vada Pav</div>
+            <div class="menu-card">🥟 Samosa</div>
+            <div class="menu-card">🥘 Chole Bhature</div>
+            <div class="menu-card">🥞 Rava Dosa</div>
 
-<div class="card"><h3>Pav Bhaji</h3></div>
+        </div>
 
-<div class="card"><h3>Chole Bhature</h3></div>
+        <div class="chatbot-container">
 
-<div class="card"><h3>Pizza</h3></div>
+            <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 
-<div class="card"><h3>Mango Lassi</h3></div>
+            <df-messenger
+                intent="WELCOME"
+                chat-title="SpiceHub Bot"
+                agent-id="12c9668e-7349-4bc4-9a27-3284d41cea92"
+                language-code="en">
+            </df-messenger>
 
-<div class="card"><h3>Masala Dosa</h3></div>
+        </div>
 
-<div class="card"><h3>Biryani</h3></div>
+        <div class="location">
+            📍 Patancheru, Hyderabad, Telangana
+        </div>
 
-<div class="card"><h3>Vada Pav</h3></div>
-
-<div class="card"><h3>Rava Dosa</h3></div>
-
-<div class="card"><h3>Samosa</h3></div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2 class="section-title">Location</h2>
-
-<div class="location">
-📍 Patancheru, Hyderabad, Telangana
-</div>
+    </div>
 
 </section>
-
-<section class="section">
-
-<h2 class="section-title">AI Food Ordering Chatbot</h2>
-
-<div class="chatbot">
-
-<p>
-Use our AI-powered chatbot to place food orders,
-track orders, and manage your cart.
-</p>
-
-<br>
-
-<!-- Replace with Dialogflow Messenger -->
-
-<df-messenger
-intent="WELCOME"
-chat-title="SpiceHub Bot"
-agent-id="12c9668e-7349-4bc4-9a27-3284d41cea92"
-language-code="en">
-</df-messenger>
-
-<script
-src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1">
-</script>
-
-</div>
-
-</section>
-
-<footer>
-
-<h3>SpiceHub Restaurant</h3>
-
-<p>
-Patancheru, Hyderabad
-</p>
-
-<p>
-AI Powered Food Ordering System
-</p>
-
-</footer>
 
 </body>
 </html>
+

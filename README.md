@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Developed an NLP-based Food Ordering Chatbot using Dialogflow, FastAPI and MySQL
 
 Overview
@@ -246,3 +247,7 @@ Web Development
 API Integration
 Session Management
 End-to-End Chatbot Development
+=======
+# food-ordering-chatbot
+Intelligent food ordering chatbot built using Dialogflow, FastAPI, Python, and MySQL with order tracking and customer management features.
+>>>>>>> c8d5bd6906433f903df51efcb16ec12ea7a3bc0a
